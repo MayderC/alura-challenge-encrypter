@@ -22,10 +22,6 @@ const getRegEncryptedWords = () => {
 };
 
 const desencrypter = (...match) => words[match[0]];
-const desencrypt = (msg) => msg.replace(getRegEncryptedWords(), desencrypter);
 const encrypter = (...match) => vowels[match[0]];
+const desencrypt = (msg) => msg.replace(getRegEncryptedWords(), desencrypter);
 const encrypt = (text) => text.replace(/[aeiou]/g, encrypter);
-
-const encrypted = encrypt("gato gato gato");
-console.log(encrypted);
-console.log(desencrypt(encrypted));
