@@ -21,21 +21,34 @@ const textArea = document.getElementById("textarea");
 const output = document.getElementById("output");
 const toggle = document.getElementById("toggle");
 const btnClear = document.getElementById("clear");
+const img = document.getElementById("img");
 let toggleLogic = true;
 toggle.textContent = toggleLogic ? "Encriptando" : "Desencriptando";
-const proxyInputTarget = (target, value) =>
-  (document.getElementById(target).value = value);
+
+const proxyInputTarget = (target, value) => {
+  document.getElementById(target).value = value;
+  if (value.length == 0) {
+    img.classList.remove("hide");
+    return;
+  }
+  img.classList.add("hide");
+};
+
 const clearText = (target) => (document.getElementById(target).value = "");
+
 textArea.addEventListener("input", (e) => {
   if (toggleLogic) return proxyInputTarget("output", encrypt(e.target.value));
   proxyInputTarget("output", desencrypt(e.target.value));
 });
+
 btnClear.addEventListener("click", () => {
   clearText("textarea");
   clearText("output");
 });
+
 toggle.addEventListener("click", () => {
   toggleLogic = !toggleLogic;
+  toggle.textContent = toggleLogic ? "Encriptando" : "Desencriptando";
   const tempValue = output.value;
   output.value = textArea.value;
   textArea.value = tempValue;

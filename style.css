@@ -45,14 +45,9 @@ body{
 }
 
 
-.footer{
-  height: 100px;
-}
-
 .container__input{
   width: 100%;
 }
-
 
 .textarea{
   resize: none;
@@ -62,7 +57,7 @@ body{
   width: 70%;
   margin: auto;
   display: block;
-  min-height: calc(var(--main-height) - 200px);
+  min-height: calc(var(--main-height) - 100px);
   color: var(--color-text);
   font-size: 32px;
 }
@@ -86,7 +81,7 @@ body{
 
 #output{
   resize: none;
-  min-height:  calc(100vh - ((var(--body-padding)*2) + 60px) );
+  min-height:  calc(100vh - ((var(--body-padding)*2) + 75px) );
   color: #495057;
   font-size: 32px;
   outline: none;
@@ -101,7 +96,6 @@ body{
 
 
 .btn{
-
   font-size: 16px;
   font-weight: bold;
   padding: 10px 15px;
@@ -125,5 +119,13 @@ body{
   border: 1px solid var(--color-text);
 }
 
+.img{
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+}
 
-
+.hide{
+  display: none;
+}
