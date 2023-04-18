@@ -53,3 +53,28 @@ toggle.addEventListener("click", () => {
   output.value = textArea.value;
   textArea.value = tempValue;
 });
+
+const copy = document.getElementById("copy");
+
+copy.addEventListener("click", () => {
+  copyToClipboard();
+});
+
+const copyToClipboard = () => {
+  const copyText = document.querySelector("#output");
+  const text = copyText.value;
+
+  const input = document.createElement("input");
+  input.style.position = "absolute";
+  input.style.left = "-9999px";
+  input.value = text;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand("copy");
+  document.body.removeChild(input);
+
+  copy.textContent = "Copiado";
+  setTimeout(() => {
+    copy.textContent = "Copy";
+  }, 2000);
+};
