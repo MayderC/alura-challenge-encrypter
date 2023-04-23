@@ -129,3 +129,30 @@ body{
 .hide{
   display: none;
 }
+
+
+@media (max-width: 716px) {
+  
+  .main{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .output{
+    position: relative;
+    width: 100%;
+  }
+  .img{
+    position: absolute;
+    display: block;
+    max-width: 100%;
+  }
+  .footer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .textarea{
+    height: 50vh;
+  }
+}
