@@ -34,7 +34,14 @@ const proxyInputTarget = (target, value) => {
   img.classList.add("hide");
 };
 
-const clearText = (target) => (document.getElementById(target).value = "");
+const clearText = (target) => {
+  document.getElementById(target).value = "";
+  if (document.getElementById(target).value.length == 0) {
+    img.classList.remove("hide");
+    return;
+  }
+  img.classList.add("hide");
+};
 
 textArea.addEventListener("input", (e) => {
   if (toggleLogic) return proxyInputTarget("output", encrypt(e.target.value));
