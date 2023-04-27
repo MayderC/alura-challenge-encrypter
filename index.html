@@ -6,24 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Challenge</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
   <main class="main">
+    <nav class="nav">
+      <img src="./img/Top.svg" alt="">
+    </nav>
     <section class="container__input">
-      <nav class="nav">
-        <img src="./img/Top.svg" alt="">
-      </nav>
       <textarea placeholder="Ingrese el texto aqui" class="textarea" id="textarea" name="" id=""></textarea>
       <footer class="footer">
         <button class="btn btn-ligth" id="toggle"></button>
         <button class="btn btn-dark" id="clear">Limpiar</button>
       </footer>
     </section>
-    <div class="output">
-      <textarea id="output"></textarea>
-      <img id="img" class="img" src="./img/Muñeco.svg" alt="" srcset="">
+    <div class="container__output">
+      <div class="output">
+        <textarea id="output"></textarea>
+        <img id="img" class="img" src="./img/Muñeco.svg" alt="" srcset="">
+      </div>
       <button id="copy" class="btn btn-dark">Copiar</button>
     </div>
   </main>

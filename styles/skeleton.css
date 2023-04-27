@@ -1,0 +1,96 @@
+
+.main{
+  display: grid;
+  grid-template-areas: 
+  ". nv nv nv ."
+  ". in in ou ."
+  ". in in ou ."
+  ". in in ou ."
+  ". in in ou ."
+  ;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+
+.container__input{
+  grid-area: in;
+  height: 100%;
+}
+
+.container__output{
+  grid-area: ou;
+  height: 100%;
+}
+
+textarea{
+  width: 100%;
+  height: 90%;
+  resize: none;
+  padding: 15px;
+}
+
+.nav{
+  grid-area: nv;
+}
+
+.output{
+  position: relative;
+  height: 90%;
+}
+
+.img{
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1150px) {
+
+  .main{
+    display: grid;
+    grid-template-areas: 
+    "nv nv nv nv nv"
+    "in in in ou ou"
+    "in in in ou ou"
+    "in in in ou ou"
+    "in in in ou ou"
+    ;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    min-height: 100vh;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 498px) {
+
+  .main{
+    display: grid;
+    grid-template-areas: 
+    "nv nv nv nv nv"
+    "in in in in in"
+    "in in in in in"
+    "ou ou ou ou ou"
+    "ou ou ou ou ou"
+    ;
+    
+    grid-template-rows: 60px 20% 20% 20% 20%;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .output, #output{
+    min-height: 100%;
+  }
+
+  textarea{
+    width: 100%;
+    height: 70%;
+    outline: none;
+    background: none;
+    border: none;
+  }
+}
