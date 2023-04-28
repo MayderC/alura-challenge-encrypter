@@ -4,13 +4,5 @@
   --third--dark: #006e9d;
   --primary-ligth: #00f5ff;
   --secondary-ligth: #00f5ff;
-
-
-  --footer-height: 190px;
-  --body-padding: 20px;
-  --nav-height: 50px;
-  --main-height: calc(100vh - (var(--body-padding)*2));
-
   --color-text: #0A3871;
-  --color-transparent : #ffffff00;
 }

@@ -4,3 +4,27 @@ textarea{
   border: none;
   font-size: 23px;
 }
+
+.btn-dark{
+  background-color: var(--third--dark);
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.btn-ligth{
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.container__output{
+
+  background-color: #ffffff;
+
+}
+
+
+.btn-copy{
+  top: 100%;
+  align-self: flex-end;
+}

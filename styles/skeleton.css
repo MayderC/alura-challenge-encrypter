@@ -24,6 +24,13 @@
 .container__output{
   grid-area: ou;
   height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+  height: auto;
 }
 
 textarea{
@@ -39,7 +46,7 @@ textarea{
 
 .output{
   position: relative;
-  height: 90%;
+  height: 100%;
 }
 
 .img{
@@ -48,6 +55,24 @@ textarea{
   top: 0;
   left: 0;
 }
+
+
+.btn{
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+.w-full{
+  width: 100%;
+}
+
 @media (max-width: 1150px) {
 
   .main{
@@ -74,23 +99,39 @@ textarea{
     "nv nv nv nv nv"
     "in in in in in"
     "in in in in in"
+    "in in in in in"
+    ".  .  .  .  . "
+    "ou ou ou ou ou"
     "ou ou ou ou ou"
     "ou ou ou ou ou"
     ;
     
-    grid-template-rows: 60px 20% 20% 20% 20%;
+    grid-template-rows: 60px 1fr 1fr 1fr 110px 1fr 1fr 1fr;
     min-height: 100vh;
     padding: 20px;
-  }
-  .output, #output{
-    min-height: 100%;
+    gap: 0;
   }
 
   textarea{
     width: 100%;
-    height: 70%;
+    height: 100%;
     outline: none;
     background: none;
     border: none;
+  }
+
+  .img{
+    width: 160px;
+    height: 160px;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .output{
+    width: 100%;
   }
 }
